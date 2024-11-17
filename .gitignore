@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/*
+/JadefireToolbelt/.vs/*
+/JadefireToolbelt/JadefireToolbelt/bin/*
+/JadefireToolbelt/JadefireToolbelt/obj/*
+/JadefireToolbelt/JadefireToolbelt/JadefireToolbelt.csproj.user
