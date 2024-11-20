@@ -26,9 +26,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\bowl.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    <Content Include="Resources\bowl.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
