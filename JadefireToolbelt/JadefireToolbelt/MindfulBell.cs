@@ -23,10 +23,8 @@ namespace JadefireToolbelt
                 throw new ArgumentNullException(nameof(soundPathSetting));
             }
 
-            var projectRoot = Directory.GetParent(Directory.GetCurrentDirectory())?.Parent?.Parent?.FullName;
-            _soundPath = projectRoot == null
-                ? throw new ArgumentNullException(nameof(projectRoot))
-                : Path.Combine(projectRoot, soundPathSetting);
+            var executablePath = AppContext.BaseDirectory;
+            _soundPath = Path.Combine(executablePath, soundPathSetting);
 
             _timer = new Timer { Interval = ONE_MINUTE * interval };
             _timer.Elapsed += OnTimerElapsed;
