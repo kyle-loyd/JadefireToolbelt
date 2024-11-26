@@ -16,9 +16,11 @@ class Program
             Application.SetCompatibleTextRenderingDefault(false);
 
             var iconTextSetting = ConfigurationManager.AppSettings["IconText"];
-            NotifyIcon trayIcon = new()
+            var iconPathSetting = ConfigurationManager.AppSettings["IconPath"];
+            var icon = !string.IsNullOrWhiteSpace(iconPathSetting) ? new Icon(iconPathSetting) : new Icon("Resources/jadefire.ico");
+            var trayIcon = new NotifyIcon()
             {
-                Icon = new Icon("./jadefire.ico"),
+                Icon = icon,
                 Visible = true,
                 Text = !string.IsNullOrWhiteSpace(iconTextSetting) ? iconTextSetting : "Jadefire"
             };
