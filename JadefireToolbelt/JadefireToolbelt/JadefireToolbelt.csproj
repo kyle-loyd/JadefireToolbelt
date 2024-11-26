@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Resources\bowl.wav" />
+    <None Remove="Resources\jadefire.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,18 +18,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="app.config">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </None>
-    <None Update="jadefire.ico">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="Resources\bowl.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\jadefire.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
 
 </Project>
